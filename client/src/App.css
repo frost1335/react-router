@@ -8,7 +8,12 @@
   padding: 20px 0;
 }
 
-.navbar ul li{
-    margin: 0 15px;
-    text-decoration: none;
+.navbar ul li {
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.navbar ul li a.active {
+  font-weight: bold;
+  color: red;
 }

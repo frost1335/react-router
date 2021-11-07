@@ -4,17 +4,17 @@ import Car from "./Car/Car";
 export const ClickedContext = React.createContext(false);
 
 class Cars extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    cars: [
+      { name: "Ford", year: 2018 },
+      { name: "Audi", year: 2016 },
+      { name: "Mazda", year: 2010 },
+    ],
+  };
 
-    this.state = {
-      cars: [
-        { name: "Ford", year: 2018 },
-        { name: "Audi", year: 2016 },
-        { name: "Mazda", year: 2010 },
-      ],
-    };
-  }
+  goToHomePage = () => {
+    this.props.history.push("/");
+  };
 
   render() {
     const divStyle = {
@@ -37,6 +37,8 @@ class Cars extends Component {
 
     return (
       <div style={divStyle}>
+        <button onClick={this.goToHomePage}>Click</button>
+        <hr />
         <div
           style={{
             width: 400,

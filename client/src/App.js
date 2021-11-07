@@ -1,23 +1,29 @@
 import React, { Component } from "react";
 import Cars from "./Cars/Cars";
 import About from "./About/About";
-import { Route, Routes, Link } from "react-router-dom";
-import classes from "./App.module.css";
+import { Route, Routes, NavLink } from "react-router-dom";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <nav className={classes.navbar}>
+        <nav className="navbar">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink to="/about">
+                About
+              </NavLink>
             </li>
             <li>
-              <Link to="/cars">Cars</Link>
+              <NavLink to={{ pathname: "/cars" }}>
+                Cars
+              </NavLink>
             </li>
           </ul>
         </nav>
