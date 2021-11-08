@@ -10,9 +10,7 @@ class Cars extends Component {
     ],
   };
 
-  goToHomePage = () => {
-
-  };
+  goToHomePage = () => {};
 
   render() {
     console.log(this.props);
