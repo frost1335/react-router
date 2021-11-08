@@ -11,19 +11,13 @@ class App extends Component {
         <nav className="navbar">
           <ul>
             <li>
-              <NavLink to="/">
-                Home
-              </NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about">
-                About
-              </NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to={{ pathname: "/cars" }}>
-                Cars
-              </NavLink>
+              <NavLink to={{ pathname: "/cars" }}>Cars</NavLink>
             </li>
           </ul>
         </nav>

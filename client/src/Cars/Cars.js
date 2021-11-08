@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Car from "./Car/Car";
 
-export const ClickedContext = React.createContext(false);
-
 class Cars extends Component {
   state = {
     cars: [
@@ -13,10 +11,11 @@ class Cars extends Component {
   };
 
   goToHomePage = () => {
-    this.props.history.push("/");
+
   };
 
   render() {
+    console.log(this.props);
     const divStyle = {
       textAlign: "center",
     };
