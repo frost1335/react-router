@@ -6,7 +6,7 @@ const About = (props) => {
   const navigate = useNavigate();
 
   const goToHome = () => {
-    navigate('/');
+    navigate("/");
   };
 
   return (

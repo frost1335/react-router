@@ -1,24 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Car.css";
-import PropTypes from "prop-types";
+import { useNavigate } from "react-router";
 
-class Car extends Component {
-  render() {
-    return (
-      <div className="Car">
-        <h3> Car name: {this.props.name} </h3>{" "}
-        <p>
-          Year: <strong> {this.props.year} </strong>{" "}
-        </p>{" "}
-      </div>
-    );
-  }
-}
+const Car = (props) => {
+  const navigate = useNavigate();
 
-Car.propTypes = {
-  name: PropTypes.string.isRequired,
-  year: PropTypes.number,
-  index: PropTypes.number,
-};
+  return (
+    <div className="Car" onClick={() => navigate(`/cars/${props.name}`)}>
+      <h3> Car name: {props.name} </h3>
+      <p>
+        Year: <strong> {props.year} </strong>
+      </p>
+    </div>
+  );
+}; 
 
 export default Car;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Car from "./Car/Car";
+import Car from './Car/Car'
 
 class Cars extends Component {
   state = {
@@ -10,10 +10,7 @@ class Cars extends Component {
     ],
   };
 
-  goToHomePage = () => {};
-
   render() {
-    console.log(this.props);
     const divStyle = {
       textAlign: "center",
     };
@@ -34,8 +31,6 @@ class Cars extends Component {
 
     return (
       <div style={divStyle}>
-        <button onClick={this.goToHomePage}>Click</button>
-        <hr />
         <div
           style={{
             width: 400,
